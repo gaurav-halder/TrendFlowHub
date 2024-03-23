@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>TrendFlow Hub</title>
+</head>
+<body>
+  <section class="live-filter">
+    <div class="search">
+      <h2>Search The Trend</h2>
+      <input type="text" name="keyword" id="keyword" placeholder="Enter keyword...">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="user-info">
+      <h2>Top Relevant Data</h2>
+      <div class="filters">
+        <label for="filterBy">Filter By:</label>
+        <select name="filterBy" id="filterBy">
+          <option value="all">All</option>
+          <option value="twitter">Twitter</option>
+          <option value="facebook">Facebook</option>
+          <option value="instagram">Instagram</option>
+        </select>
+      </div>
+      <div class="options">
+        <label for="sortBy">Sort By:</label>
+        <select name="sortBy" id="sortBy">
+          <option value="relevant">Most Relevant</option>
+          <option value="latest">Latest</option>
+          <option value="popular">Most Popular</option>
+        </select>
+      </div>
+      <ul class="user-list">
+        <!-- Data will be loaded dynamically using JavaScript -->
+        <!-- Placeholder for initial loading message -->
+        <ul>Loading...</ul>
+      </ul>
+    </div>
+      
+  </section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

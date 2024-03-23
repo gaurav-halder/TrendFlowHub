@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Adjust font family */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.live-filter {
+  width: 35rem;
+  box-shadow: 1rem 1rem 2rem rgb(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  margin: 3rem 0;
+  background-color: aliceblue;
+}
+
+.search {
+  background-color: #432c7a;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 3rem 0;
+  color: #fff;
+}
+
+.search h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.search input {
+  width: 70%; /* Adjust width */
+  border: none;
+  padding: 0.8rem 0.5rem;
+  font-family: "Poppins", sans-serif; /* Adjust font family */
+  outline: none;
+  border-radius: 0.3rem;
+  margin-right: 1rem; /* Add margin for spacing */
+}
+
+.search button {
+  background-color: #fff; /* Change button background color */
+  color: #432c7a; /* Change button text color */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-family: "Poppins", sans-serif; /* Adjust font family */
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #432c7a; /* Change button background color on hover */
+  color: #fff; /* Change button text color on hover */
+}
+
+.user-info {
+  padding: 2rem;
+  height: 40rem;
+  overflow-y: auto;
+}
+
+
+.filters,
+.options {
+  margin-bottom: 1.5rem; /* Add margin for separation */
+}
+
+.filters label,
+.options label {
+  display: block; /* Ensure labels are displayed as block elements */
+  margin-bottom: 0.5rem; /* Add margin for separation */
+}
+
+.filters select,
+.options select {
+  width: 30%; /* Ensure select elements take full width */
+  padding: 0.3rem; /* Adjust padding */
+  border-radius: 0.3rem;
+  outline: none;
+}
+.search button {
+  background-color: #fff; /* Change button background color */
+  color: #432c7a; /* Change button text color */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-family: "Poppins", sans-serif; /* Adjust font family */
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
