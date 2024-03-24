@@ -25,31 +25,37 @@ p {
 }
 
 .live-filter {
-  width: 35rem;
+  width: 100%;
   box-shadow: 1rem 1rem 2rem rgb(0, 0, 0, 0.3);
   border-radius: 1rem;
-  margin: 3rem 0;
   background-color: aliceblue;
 }
 
 .search {
   background-color: #432c7a;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
+  height: 32vh;
   padding: 3rem 0;
   color: #fff;
 }
-
+.logo{
+  background-image: url("trendflowhub-logo.png");
+  background-size: cover;
+  margin-left: 4vh;
+  margin-top: -3vh;
+  height: 6vh;
+  width: 45vh;
+}
 .search h2 {
   font-weight: bold;
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .search input {
-  width: 70%; /* Adjust width */
+  width: 50%; /* Adjust width */
   border: none;
   padding: 0.8rem 0.5rem;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif; /* Adjust font family */
   outline: none;
   border-radius: 0.3rem;
@@ -73,27 +79,28 @@ p {
 }
 
 .user-info {
-  padding: 2rem;
+  padding: 1rem;
   height: 40rem;
   overflow-y: auto;
 }
 
-
 .filters,
 .options {
-  margin-bottom: 1.5rem; /* Add margin for separation */
+  margin: 1rem; /* Add margin for separation */
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .filters label,
 .options label {
-  display: block; /* Ensure labels are displayed as block elements */
-  margin-bottom: 0.5rem; /* Add margin for separation */
+  display: 0rem; /* Ensure labels are displayed as block elements */
+  margin-bottom: 0rem; /* Add margin for separation */
 }
 
 .filters select,
 .options select {
-  width: 30%; /* Ensure select elements take full width */
-  padding: 0.3rem; /* Adjust padding */
+  width: 19vh; /* Ensure select elements take full width */
+  padding: 0.1rem; /* Adjust padding */
   border-radius: 0.3rem;
   outline: none;
 }

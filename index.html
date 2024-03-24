@@ -9,6 +9,7 @@
 <body>
   <section class="live-filter">
     <div class="search">
+      <div class="logo"></div>
       <h2>Search The Trend</h2>
       <input type="text" name="keyword" id="keyword" placeholder="Enter keyword...">
       <button id="searchBtn">Search</button>
@@ -24,25 +25,21 @@
           <option value="instagram">Instagram</option>
         </select>
       </div>
-      <div class="options">
+    <div class="options">
         <label for="sortBy">Sort By:</label>
         <select name="sortBy" id="sortBy">
           <option value="relevant">Most Relevant</option>
           <option value="latest">Latest</option>
           <option value="popular">Most Popular</option>
         </select>
-      </div>
+    </div>
       <ul class="user-list">
         <!-- Data will be loaded dynamically using JavaScript -->
         <!-- Placeholder for initial loading message -->
         <ul>Loading...</ul>
       </ul>
     </div>
-      
   </section>
-
-  
-
   <script src="script.js"></script>
 </body>
 </html>
