@@ -1,34 +1,80 @@
-const Twitter = require('twitter-lite');
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBtn = document.getElementById('searchBtn');
+    const keywordInput = document.getElementById('keyword');
+    const userList = document.querySelector('.user-list');
+    const filterBy = document.getElementById('filterBy');
+    const sortBy = document.getElementById('sortBy');
 
-const client = new Twitter({
-    subdomain: 'api', // "api" is the default (change for other subdomains)
-    version: '1.1', // version "1.1" is the default (change for other subdomains)
-    consumer_key: '8FAdCtGzWxM52D2pMHanr5PX7', // API Key
-    consumer_secret: 'n9POcrg8Wp7pSgLrOBBh8JRDEDjyPPRM4vLgcOZO0kboc0AuQ1', // API Key Secret
-    access_token_key: '1705655220917633024-MgAYkP419hhBYDN5yRNcdG1jeN1LfQ', // Access Token
-    access_token_secret: 'fthQxn3qOKMNqWTLioxMJSTY9rarrMYFMWtPGsxrdUydi', // Access Token Secret
+    searchBtn.addEventListener('click', async function() {
+        const keyword = keywordInput.value;
+        const platform = filterBy.value;
+        if (!keyword) {
+            alert("Please enter a keyword to search.");
+            return;
+        }
+        
+        // Clear previous results
+        userList.innerHTML = '<ul>Loading...</ul>';
+
+        try {
+            // Fetch tweets (currently client side but should be server side)
+            const posts = await fetchPostsByKeyword(keyword,platform);
+            
+          // Clear the current posts
+        userList.innerHTML = '';
+
+        // Check if posts are found
+        if(posts.length === 0) {
+            userList.innerHTML = '<li>No posts found.</li>';
+            return;
+        }
+
+        // Iterate over each post and add it to the UI
+        posts.forEach(post => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                
+                <h3><strong>Text:</strong> ${post.text}</p>
+                <h4><strong>Platform:</strong> ${post.platform}</p>
+                <p><strong>Author:</strong> ${post.author}</p>
+                <div class="post-meta">
+                <p><strong>Likes:</strong> ${post.likeCount}, <strong>Comments:</strong> ${post.commentCount}</p>
+                </div>
+                <p><strong>Date:</strong> ${new Date(post.timestamp).toLocaleDateString()}</p>
+                <a href="${post.mediaUrl}" target="_blank">View Post</a>
+            `; // Adjust according to your post object structure
+            userList.appendChild(li);
+        });
+        } catch (error) {
+            userList.innerHTML = '<ul>Error loading data. Please try again.</ul>';
+            console.error(error);
+        }
+    });
+
+
+    async function fetchPostsByKeyword(keyword,platform) {
+        try {
+            const response = await fetch(`https://basicsocialmedia-gkhs.onrender.com/api/posts/search?query=${keyword}&platform=${platform}&sortBy=${sortBy.value}`);
+            const posts = await response.json();
+
+            console.log(posts);
+            
+            return posts;
+            
+        } catch (error) {
+            console.error('sddError fetching tweets:', error);
+        }
+    }
+
+    // Filtering and sorting logic
+    filterBy.addEventListener('change', function() {
+        // Add filtering logic here
+    });
+
+    sortBy.addEventListener('change', function() {
+        // Add sorting logic here
+
+    });
+
+    // Continue with logic for Facebook and Instagram if needed
 });
-
-
-// Function to fetch tweets based on keyword
-async function fetchTweetsByKeyword(keyword) {
-  try {
-      const tweets = await client.get('search/tweets', { q: keyword });
-      return tweets;
-  } catch (error) {
-      console.error('Error fetching tweets:', error);
-      throw error;
-  }
-}
-
-// Example usage
-const keyword = 'nodejs'; // Specify the keyword or hashtag you want to search for
-fetchTweetsByKeyword(keyword)
-  .then((tweets) => {
-      // Process and handle tweets
-      console.log(tweets);
-  })
-  .catch((error) => {
-      // Handle error
-      console.error(error);
-  });

@@ -107,3 +107,56 @@ p {
   border-radius: 0.3rem;
   transition: background-color 0.3s ease;
 }
+
+/* Post List Enhancements */
+.user-list {
+  list-style-type: none; /* Remove default list styling */
+}
+
+.user-list li {
+  background-color: #fff; /* Light background for each post */
+  margin-bottom: 2rem; /* Space between posts */
+  padding: 1.5rem; /* Padding inside each post */
+  border-radius: 10px; /* Rounded corners for post cards */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  text-align: left; /* Align text to the left */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Distribute space */
+}
+
+.user-list li p {
+  margin: 0.5rem 0; /* Margin around paragraphs */
+}
+
+/* Enhance the header within each post */
+.user-list li h3 {
+  color: #432c7a; /* Theme color for headers */
+  margin-bottom: 1rem; /* Space below headers */
+}
+
+/* Style for meta information (likes, comments, etc.) */
+.post-meta {
+  color: #666; /* Dark gray for meta text */
+  font-size: 0.9rem; /* Smaller font size for meta information */
+  margin-top: 1rem; /* Space above meta section */
+}
+
+/* Buttons and Links inside posts */
+.user-list li button,
+.user-list li a {
+  background-color: #432c7a;
+  color: #fff;
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.5rem 1rem; /* Padding inside buttons/links */
+  border: none; /* Remove border from buttons */
+  border-radius: 5px; /* Rounded corners for buttons/links */
+  margin-top: 1rem; /* Space above buttons/links */
+  display: inline-block; /* Allow for inline placement */
+  cursor: pointer; /* Cursor for clickable elements */
+}
+
+.user-list li button:hover,
+.user-list li a:hover {
+  background-color: #311c5d; /* Darker shade on hover */
+}
