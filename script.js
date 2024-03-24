@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function fetchPostsByKeyword(keyword,platform) {
         try {
-            const response = await fetch(`https://basicsocialmedia-gkhs.onrender.com/api/posts/search?query=${keyword}&platform=${platform}&sortBy=${sortBy.value}`);
+            const response = await fetch(`http://localhost:3000/api/posts/search?query=${keyword}&platform=${platform}&sortBy=${sortBy.value}`);
             const posts = await response.json();
 
             console.log(posts);
