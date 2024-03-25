@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Check if posts are found
         if(posts.length === 0) {
-            userList.innerHTML = '<li>No posts found.</li>';
+            userList.innerHTML = '<li>No posts found. Adding in DB, Please search again</li>';
             return;
         }
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function fetchPostsByKeyword(keyword,platform) {
         try {
-            const response = await fetch(`https://be-basicsocialmedia.onrender.com/api/posts/search?query=${keyword}&platform=${platform}&sortBy=${sortBy.value}`);
+            const response = await fetch(`https://basicsocialmedia-gkhs.onrender.com/api/posts/search?query=${keyword}&platform=${platform}&sortBy=${sortBy.value}`);
             const posts = await response.json();
 
             console.log(posts);
@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
             return posts;
             
         } catch (error) {
-            console.error('sddError fetching tweets:', error);
+            console.error('Error fetching tweets:', error);
         }
     }
+   
 
     // Filtering and sorting logic
     filterBy.addEventListener('change', function() {
@@ -75,6 +76,5 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add sorting logic here
 
     });
-
     // Continue with logic for Facebook and Instagram if needed
 });
