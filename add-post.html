@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Add New Post - TrendFlowHub</title>
+</head>
+<body>
+</section>
+<div class="form-container">
+<div class="post-submission">
+  <h2>Submit New Post</h2>
+  <form id="postForm">
+    <input type="text" name="platform" placeholder="Platform (e.g., twitter)" required />
+    <input type="text" name="text" placeholder="Post Text" required />
+    <input type="text" name="author" placeholder="Author" required />
+    <input type="number" name="likeCount" placeholder="Likes Count" required />
+    <input type="number" name="commentCount" placeholder="Comments Count" required />
+    <input type="number" name="shareCount" placeholder="Shares Count" required />
+    <input type="text" name="mediaUrl" placeholder="Media URL" required />
+    <input type="datetime-local" name="timestamp" placeholder="Timestamp" required />
+    <button type="submit">Submit Post</button>
+  </form>
+  <div id="message" style="display: none; margin-top: 10px;"></div> <!-- Ensure this is outside the form -->
+  <a href="index.html" class="back-button">Back to Home</a>
+
+</div>
+</section>
+  <script src="add-post.js"></script> 
+</body>
+</html>

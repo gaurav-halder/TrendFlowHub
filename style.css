@@ -18,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  }
 
 p {
   line-height: 1.6;
@@ -29,6 +29,7 @@ p {
   box-shadow: 1rem 1rem 2rem rgb(0, 0, 0, 0.3);
   border-radius: 1rem;
   background-color: aliceblue;
+  padding: 1rem;
 }
 
 .search {
@@ -41,7 +42,7 @@ p {
   background-image: url("trendflowhub-logo.png");
   background-size: cover;
   margin-left: 4vh;
-  margin-top: -3vh;
+  margin-top: 1vh;
   height: 6vh;
   width: 45vh;
 }
@@ -93,14 +94,14 @@ p {
 
 .filters label,
 .options label {
-  display: 0rem; /* Ensure labels are displayed as block elements */
-  margin-bottom: 0rem; /* Add margin for separation */
+  display: 0rem;
+  margin-bottom: 0rem; 
 }
 
 .filters select,
 .options select {
-  width: 19vh; /* Ensure select elements take full width */
-  padding: 0.1rem; /* Adjust padding */
+  width: 19vh;
+  padding: 0.1rem; 
   border-radius: 0.3rem;
   outline: none;
 }
@@ -166,4 +167,85 @@ p {
 .user-list li button:hover,
 .user-list li a:hover {
   background-color: #311c5d; /* Darker shade on hover */
+}
+
+.form-container {
+  display: flex;
+  justify-content: left; /* Center the form horizontally */
+  width: 100%; /* Full width to center within */
+  margin-top: 2rem; /* Space above the form */
+}
+
+.post-submission {
+  width: 100%;
+  max-width: 600px; /* Maximum width of the form for larger screens */
+  margin: 0 auto; /* Center the form */
+  padding: 2rem;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.post-submission h2 {
+  color: #432c7a; /* Theme color for headers */
+  margin-bottom: 1.5rem; /* Space below the header */
+}
+
+.post-submission form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center form elements */
+}
+
+.post-submission form input,
+.post-submission form select,
+.post-submission form button {
+  width: 80%; /* Full width within the form */
+  padding: 0.8rem; /* Adequate padding for touch targets */
+  margin: 0.5rem 0; /* Space out elements */
+  border-radius: 0.3rem; /* Rounded corners */
+  border: 1px solid #ccc; /* Subtle border */
+  font-family: "Poppins", sans-serif; /* Consistent font family */
+}
+
+.post-submission form button {
+  background-color: #432c7a; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.post-submission form button:hover {
+  background-color: #311c5d; /* Darker shade on hover */
+}
+
+/* Adjusting the width and margin for select elements to align with input fields */
+.post-submission form select {
+  width: calc(80% + 1.6rem); /* Counteract default browser styling */
+  margin-left: -0.8rem;
+  margin-right: -0.8rem;
+}
+
+/* Ensure consistent appearance for datetime-local input */
+.post-submission form input[type="datetime-local"] {
+  font-family: "Poppins", sans-serif;
+}
+/* CSS for the Add Post Button */
+.add-post-button {
+  background-color: #432c7a;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem; /* Adjust as needed */
+  margin-left: 1rem; /* Adjust as needed */
+  
+}
+
+.add-post-button:hover {
+  background-color: #311c5d;
 }

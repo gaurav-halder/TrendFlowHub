@@ -10,9 +10,13 @@
   <section class="live-filter">
     <div class="search">
       <div class="logo"></div>
-      <h2>Search The Trend</h2>
+      <h1>Search The Trend</h1>
       <input type="text" name="keyword" id="keyword" placeholder="Enter keyword...">
       <button id="searchBtn">Search</button>
+     
+    </div>
+    <div>
+      <button onclick="window.location.href='add-post.html'" id="addPostBtn" class="add-post-button">Add a Post</button>
     </div>
     <div class="user-info">
       <h2>Top Relevant Data</h2>
@@ -35,11 +39,13 @@
     </div>
       <ul class="user-list">
         <!-- Data will be loaded dynamically using JavaScript -->
+
         <!-- Placeholder for initial loading message -->
         <ul>Loading...</ul>
       </ul>
     </div>
   </section>
+
   <script src="script.js"></script>
 </body>
 </html>
