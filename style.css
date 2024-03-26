@@ -29,24 +29,24 @@ p {
   box-shadow: 1rem 1rem 2rem rgb(0, 0, 0, 0.3);
   border-radius: 1rem;
   background-color: aliceblue;
-  padding: 1rem;
 }
 
 .search {
   background-color: #432c7a;
   height: 32vh;
-  padding: 3rem 0;
+  width: 100%;
+  padding: 2rem 0;
   color: #fff;
 }
 .logo{
   background-image: url("trendflowhub-logo.png");
   background-size: cover;
   margin-left: 4vh;
-  margin-top: 1vh;
+  margin-bottom: 1vh;
   height: 6vh;
   width: 45vh;
 }
-.search h2 {
+.search h1 {
   font-weight: bold;
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -60,14 +60,16 @@ p {
   font-family: "Poppins", sans-serif; /* Adjust font family */
   outline: none;
   border-radius: 0.3rem;
-  margin-right: 1rem; /* Add margin for spacing */
+  margin-right: 0.7rem; /* Add margin for spacing */
 }
 
 .search button {
+
+  font-size: 1rem;
   background-color: #fff; /* Change button background color */
   color: #432c7a; /* Change button text color */
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem .5rem;
   font-family: "Poppins", sans-serif; /* Adjust font family */
   cursor: pointer;
   border-radius: 0.3rem;
@@ -181,12 +183,12 @@ p {
   max-width: 600px; /* Maximum width of the form for larger screens */
   margin: 0 auto; /* Center the form */
   padding: 2rem;
-  background-color: #f0f0f0;
+  background-color: #432c7a;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .post-submission h2 {
-  color: #432c7a; /* Theme color for headers */
+  color: white; /* Theme color for headers */
   margin-bottom: 1.5rem; /* Space below the header */
 }
 
@@ -208,14 +210,16 @@ p {
 }
 
 .post-submission form button {
-  background-color: #432c7a; /* Button color */
-  color: white; /* Button text color */
+  width: 20vh;
+  background-color: white; /* Button color */
+  color: #432c7a; /* Button text color */
   border: none; /* Remove border */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .post-submission form button:hover {
+  color: white;
   background-color: #311c5d; /* Darker shade on hover */
 }
 

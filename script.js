@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Clear previous results
+        // Clear previous results ,sets the inner HTML content of the user list element to a loading message//
         userList.innerHTML = '<ul>Loading...</ul>';
 
         try {
